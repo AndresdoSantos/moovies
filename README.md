@@ -13,5 +13,5 @@ App criado para comprar ingresso do cinema e dar aquela olhada na sinopse.
 
 ### 📅 Novas atualizações
 
-[] Adicionar sistema de pagamento.
+:white_large_square
 <input type="checkbox" disabled checked />
