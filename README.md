@@ -13,5 +13,5 @@ App criado para comprar ingresso do cinema e dar aquela olhada na sinopse.
 
 ### 📅 Novas atualizações
 
-:white_check_mark: Criar a lógica e a estilização.
+:white_check_mark: Criar a lógica e a estilização. <br />
 :white_large_square: Adicionar sistema de pagamentos.
