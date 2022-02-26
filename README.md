@@ -8,7 +8,7 @@ App criado para comprar ingresso do cinema e dar aquela olhada na sinopse.
 
 - React Native (Expo)
 - Context API
-- styled-components
+- Styled-components
 - Typescript
 
 ### 📅 Novas atualizações
