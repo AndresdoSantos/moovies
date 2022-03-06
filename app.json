@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "movies",
-    "slug": "movies",
+    "name": "moovies",
+    "slug": "moovies",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

@@ -73,6 +73,8 @@ export const CardWrapper = styled.Pressable`
 
   width: ${Dimensions.get('screen').width / 2.5}px;
   margin: 8px;
+
+  position: relative;
 `;
 
 export const CardWrapperTitle = styled.Text.attrs({

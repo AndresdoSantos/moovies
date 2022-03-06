@@ -19,7 +19,9 @@ import {
 } from './styles';
 
 export function Home() {
-  const { getMovie } = useContext(NavigationContext);
+  const { getMovie, movie } = useContext(NavigationContext);
+
+  console.log(movie);
 
   const movies = useMemo(
     (): TMovie[] => [
@@ -110,6 +112,20 @@ export function Home() {
           keyExtractor={(item) => item.name}
           renderItem={({ item }) => (
             <CardWrapper onPress={() => getMovie(item)}>
+              {movie?.name === item.name && (
+                <Ionicons
+                  name="bookmark"
+                  color="#FAC53D"
+                  size={30}
+                  style={{
+                    position: 'absolute',
+                    top: -10,
+                    right: 5,
+                    zIndex: 50,
+                  }}
+                />
+              )}
+
               <Image
                 source={item.imageURL}
                 style={{

@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
-import { useCallback, useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { useCallback, useContext, useState } from 'react';
+import { FlatList, Pressable, Text, View } from 'react-native';
+import { NavigationContext } from '../../contexts/NavigationContext';
 
 import {
   BookingCardContainer,
@@ -17,6 +18,7 @@ import {
   BookingButton,
   BookingButtonText,
   BookingButtonDot,
+  BookingButtonPressable,
 } from './styles';
 
 const date = [
@@ -38,11 +40,12 @@ type TBookingCardProps = {
 };
 
 export function BookingCard({ ticketPrice }: TBookingCardProps) {
+  const { page, getPage } = useContext(NavigationContext);
+
   const [daySelected, setDaySelected] = useState<string | undefined>(undefined);
   const [hourSelected, setHourSelected] = useState<string | undefined>(
     undefined
   );
-
   return (
     <BookingCardContainer>
       <TopLine />
@@ -98,7 +101,10 @@ export function BookingCard({ ticketPrice }: TBookingCardProps) {
           end={[1, 0]}
         >
           <BookingButtonDot inLeft />
-          <BookingButtonText>Booking</BookingButtonText>
+
+          <BookingButtonPressable onPress={() => getPage('home')}>
+            <BookingButtonText>Booking</BookingButtonText>
+          </BookingButtonPressable>
           <BookingButtonDot inLeft={false} />
         </BookingButton>
       </BookingButtonWrapper>

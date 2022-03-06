@@ -143,3 +143,10 @@ export const BookingButtonDot = styled.View<TBookingButtonDot>`
       right: -15px;
     `}
 `;
+
+export const BookingButtonPressable = styled.Pressable`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
